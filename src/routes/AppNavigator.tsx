@@ -5,10 +5,9 @@ import SplashScreen from '../screens/SplashScreen/SplashScreen';
 import LoginScreen from '../screens/Login/LoginScreen';
 import HomeScreen from '../screens/Home/HomeScreen';
 import DetailsScreen from '../screens/Details/DetailsScreen';
-import { RootStackParamList, Ticket } from '../types/navigation';
+import { RootStackParamList } from '../types/navigation';
 
 
-// Tipagem para o Stack
 const Stack = createStackNavigator<RootStackParamList>();
 
 const AppNavigator = () => {

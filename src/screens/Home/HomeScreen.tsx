@@ -11,7 +11,6 @@ import Footer from '../../components/Footer/Footer';
 import { RootStackParamList, Ticket } from '../../types/navigation';
 
 
-// Tipar a navegação
 type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
 
 const HomeScreen = () => {

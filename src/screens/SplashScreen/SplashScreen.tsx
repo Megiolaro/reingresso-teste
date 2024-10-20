@@ -10,18 +10,17 @@ const SplashScreen = () => {
   const navigation = useNavigation<SplashScreenNavigationProp>();
 
   useEffect(() => {
-    // Timer para 3 segundos
+   
     const timer = setTimeout(() => {
-      navigation.navigate('Login'); // Navega para a tela Home após 3 segundos
+      navigation.navigate('Login'); 
     }, 3000);
 
-    // Limpar o timer quando o componente desmontar
+    
     return () => clearTimeout(timer);
   }, [navigation]);
 
   return (
     <Container>
-      {/* Imagem da splash */}
       <SplashImage source={require('../../../assets/logo.png')} resizeMode="contain" />
     </Container>
   );

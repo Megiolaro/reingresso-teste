@@ -2,10 +2,10 @@ import React from 'react';
 import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
 import { ButtonContainer, ButtonText } from './styles';
 
-// Define os tipos de variante
+
 type ButtonVariant = 'primary' | 'secondary';
 
-// Define as propriedades do botão
+
 interface ButtonProps extends TouchableOpacityProps {
   title: string;
   variant?: ButtonVariant;

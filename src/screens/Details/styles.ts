@@ -17,8 +17,11 @@ export const BackButton = styled.TouchableOpacity`
   padding: 8px;
   margin-top: 50px;
   background-color: #60E886;
-  border-radius: 38px;
+  border-radius: 50px;
   margin-left: 15px;
+  height: 48px;
+  width: 48px;
+  align-items: center;
 `;
 
 export const BackText = styled.Text`

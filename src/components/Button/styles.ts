@@ -7,7 +7,7 @@ export const ButtonContainer = styled.View<{ variant: 'primary' | 'secondary' }>
   border-radius: 40px;
   align-items: center;
   margin-bottom: 10px;
-  justify-content: center;  /* Isso alinha o texto verticalmente ao centro */
+  justify-content: center;
   margin-bottom: 10px;
   
 

@@ -10,25 +10,10 @@ import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useRoute, RouteProp, useNavigation } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import { StackNavigationProp } from '@react-navigation/stack';
 import Footer from '../../components/Footer/Footer';
+import { Ticket, RootStackParamList } from '../../types/navigation';
 
-type RootStackParamList = {
-  Home: undefined; // Rota "Home" sem parâmetros
-  Details: { ticket: Ticket }; // A rota "Details" recebe um ticket
-};
-
-const Stack = createStackNavigator<RootStackParamList>();
-
-
-
-type Ticket = {
-  date: string;
-  title: string;
-  location: string;
-  price: string;
-};
 
 type RouteParams = {
   Details: { ticket: Ticket };
