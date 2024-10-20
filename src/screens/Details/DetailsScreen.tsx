@@ -68,7 +68,7 @@ const DetailsScreen = () => {
             <TicketPrice>{ticket.price}</TicketPrice>
 
           </TicketInfo>
-        </TicketBackground>
+        </TicketBackground> 
 
 
         <TicketDetailsSection>
