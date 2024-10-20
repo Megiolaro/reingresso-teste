@@ -2,17 +2,17 @@ import React from 'react';
 import { ScrollView,} from 'react-native';
 import {
   Container, Header, BackButton, BackText, Title, TicketInfo, TicketPrice, TicketTitle, TicketDate,
-  TicketLocation, TicketDetailsSection, DetailTitle, DetailItem, Label, Value, Footer, FooterButton, FooterText,
-  BuyButton, BuyButtonText, TicketBackground, Location, DetailContainer, LabelWithIcon
+  TicketLocation, TicketDetailsSection, DetailTitle, DetailItem, Label, Value,
+  TicketBackground, Location, DetailContainer, LabelWithIcon, ButtonContainer
 } from './styles';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import Button from '../../components/Button/Button';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
-import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useRoute, RouteProp, useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StackNavigationProp } from '@react-navigation/stack';
+import Footer from '../../components/Footer/Footer';
 
 type RootStackParamList = {
   Home: undefined; // Rota "Home" sem parâmetros
@@ -37,6 +37,8 @@ type RouteParams = {
 type NavigationProp = StackNavigationProp<RootStackParamList, 'Details'>;
 
 const DetailsScreen = () => {
+
+  
 
   const navigation = useNavigation<NavigationProp>();
 
@@ -136,24 +138,12 @@ const DetailsScreen = () => {
         </TicketDetailsSection>
       </ScrollView>
 
-      <BuyButton>
-        <BuyButtonText>Comprar</BuyButtonText>
-      </BuyButton>
+      <ButtonContainer>
+        <Button title="Comprar" variant="primary" />
+      </ButtonContainer>
+   
+      <Footer />
 
-      <Footer>
-        <FooterButton onPress={() => navigation.navigate('Home')}>
-          <MaterialIcons name="home-filled" size={32} color="white" />
-          <FooterText>Home</FooterText>
-        </FooterButton>
-        <FooterButton>
-          <MaterialCommunityIcons name="ticket-confirmation-outline" size={32} color="white" />
-          <FooterText>Ingressos</FooterText>
-        </FooterButton>
-        <FooterButton>
-          <FontAwesome5 name="user" size={32} color="white" />
-          <FooterText>Minha conta</FooterText>
-        </FooterButton>
-      </Footer>
     </Container>
   );
 };

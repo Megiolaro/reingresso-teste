@@ -1,26 +1,12 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import SplashScreen from '../screens/SplashScreen';
+import SplashScreen from '../screens/SplashScreen/SplashScreen';
 import LoginScreen from '../screens/Login/LoginScreen';
 import HomeScreen from '../screens/Home/HomeScreen';
 import DetailsScreen from '../screens/Details/DetailsScreen';
+import { RootStackParamList, Ticket } from '../types/navigation';
 
-// Declare o tipo Ticket
-type Ticket = {
-  date: string;
-  title: string;
-  location: string;
-  price: string;
-};
-
-// Tipagem das rotas
-type RootStackParamList = {
-  Splash: undefined;
-  Login: undefined;
-  Home: undefined;
-  Details: { ticket: Ticket };
-};
 
 // Tipagem para o Stack
 const Stack = createStackNavigator<RootStackParamList>();
@@ -28,7 +14,8 @@ const Stack = createStackNavigator<RootStackParamList>();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="Splash" screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Splash" component={SplashScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Details" component={DetailsScreen} />

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Container,HeaderContainer,  Logo, Title, Input, ForgotPasswordText, LoginButton, 
-LoginButtonText, GuestButton, GuestButtonText, SignUpContainer, SignUpText, SignUpLink } from './styles'
+import { Container,HeaderContainer,  Logo, Title, Input, ForgotPasswordText, SignUpContainer, SignUpText, SignUpLink } from './styles'
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
+import Button from '../../components/Button/Button';
+
 
 type RootStackParamList = {
   Login: undefined;
@@ -33,13 +34,8 @@ const LoginScreen = () => {
 
       <ForgotPasswordText>Esqueceu a senha?</ForgotPasswordText>
 
-      <LoginButton>
-        <LoginButtonText>Entrar</LoginButtonText>
-      </LoginButton>
-
-      <GuestButton>
-        <GuestButtonText onPress={handleGuestLogin}>Entrar sem login</GuestButtonText>
-      </GuestButton>
+      <Button title="Entrar" variant="primary" />
+      <Button title="Entrar sem login" onPress={handleGuestLogin} variant="secondary" />
 
       <SignUpContainer>
         <SignUpText>Não possui cadastro? </SignUpText>

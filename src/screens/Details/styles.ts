@@ -41,8 +41,8 @@ export const TicketBackground = styled.ImageBackground.attrs({
   })`
   background-size: cover;
   background-position: center;
-  width: 326px;
-  height: 122px;
+  width: 339px;
+  height: 120px;
   padding: 16px;
   margin: 10px auto;
   position: relative;
@@ -89,7 +89,6 @@ export const TicketDate = styled.Text`
 export const Location = styled.View`
     display: flex;
     flex-direction: row;
-    align-items: center;
     gap: 2px;
 `
 
@@ -97,7 +96,7 @@ export const TicketLocation = styled.Text`
   color: #666;
   font-size: 12px;
   font-weight: 400;
-  width: 70%;
+  width: 75%;
 `;
 
 export const TicketDetailsSection = styled.View`
@@ -171,17 +170,6 @@ export const FooterText = styled.Text`
   font-weight: 400;
 `;
 
-export const BuyButton = styled.TouchableOpacity`
-  background-color: #00cc66;
-  padding: 15px;
-  border-radius: 40px;
-  margin: 20px;
-  align-items: center;
-  height: 52px;
-`;
-
-export const BuyButtonText = styled.Text`
-  color: #000;
-  font-size: 16px;
-  font-weight: 600;
-`;
+export const ButtonContainer = styled.View`
+  padding: 0 20px;
+`
